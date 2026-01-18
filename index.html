@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+<section class="max-w-md
+min-h-screen mx-auto py-6 bg-gray-200">
+<header class="relative">
+    <div class="flex justify-center items-center mt-20 ">
+        <img class="w-48 absolute" src="./assets/bg.png" alt="">
+        <img class="w-16 mb-5" src="./assets/Group.png" alt="">
+    </div>
+</header>
+
+<!-- login section -->
+
+<form action="">
+    <div class="bg-white ml-10 mr-10 rounded-[10px] h-70">
+    
+        <fieldset class="flex flex-col mx-10 gap-[10px] py-10">
+
+        <label class="font-medium" for="number">Mobile Number</label>
+    <input id="input-number" class="bg-gray-100 rounded-[20px] py-[6px] border-none outline-none pl-5" type="number" name="number" id="" placeholder="enter your number">
+
+    <label class="font-medium" for="number">4 Digit Pin</label>
+    <input id="input-pin" class="bg-gray-100 rounded-[20px] py-[6px] border-none outline-none pl-5" type="number" name="number" id="" placeholder="enter 4 digit pin">
+
+    <button id="login-btn" class="bg-blue-500 rounded-[20px] py-[6px] border-none text-white font-medium" type="button">Login</button>
+
+    </fieldset>
+    
+</div>
+</form>
+
+<!-- login section end -->
+</section>
+
+<script src="./script/login.js"></script>
+</body>
+</html>
