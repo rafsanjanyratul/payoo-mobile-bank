@@ -14,6 +14,10 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
     document.getElementById("input-pin").value = ""
     document.getElementById("input-number").value = ""
 
+    if (convertedInputAmountEle < 0) {
+        alert("please use positive digit");
+        return;
+    }
 
     if (selectEle.value !== "") {
 
@@ -25,6 +29,17 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
 
                     const sum = convertedMainBalanceEle + convertedInputAmountEle;
                     document.getElementById("main-balance").innerText = sum;
+
+                    const div = document.createElement("div");
+                    div.innerHTML = `
+                    <div class="bg-white rounded-[5px] py-[6px] border border-gray-500 px-5 h-20">
+                    <p class="text-xs">Added money $<span class="font-bold">${convertedInputAmountEle}</span> from <span class="font-bold">${inputNumberEle}</span> by <span class="font-bold">${selectEle.value}</span> Transaction id : <span class="font-bold">${Math.floor(100000 + Math.random() *900000)}</span></p>
+                    <p class="text-xs">${new Date()}</P>
+                    </div>
+                    `
+                    const newDiv = document.getElementById("transaction-container")
+                    newDiv.appendChild(div)
+
                 }
                 else {
                     alert("please enter a valid pin")
