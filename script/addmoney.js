@@ -14,8 +14,8 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
     document.getElementById("input-pin").value = ""
     document.getElementById("input-number").value = ""
 
-    if (convertedInputAmountEle < 0) {
-        alert("please use positive digit");
+    if (convertedInputAmountEle <= 0) {
+        alert("please use positive digit larger then 0");
         return;
     }
 
